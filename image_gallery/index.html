@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wanderframe — Image Gallery</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <div class="eyebrow">Wanderframe · Volume II</div>
+  <h1>A quiet collection of places worth returning to.</h1>
+  <p>Twelve frames, four moods — mountains, coasts, cities, and the wild in between. Click any image to step into the lightbox.</p>
+</header>
+
+<nav class="filters" id="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="mountain">Mountain</button>
+  <button class="filter-btn" data-filter="coast">Coast</button>
+  <button class="filter-btn" data-filter="city">City</button>
+  <button class="filter-btn" data-filter="forest">Forest</button>
+  <span class="count" id="count"></span>
+</nav>
+
+<main class="gallery" id="gallery"></main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&times;</button>
+  <div class="lb-stage">
+    <div class="lb-img-wrap">
+      <button class="lb-nav lb-prev" id="lbPrev">&#8249;</button>
+      <img id="lbImg" src="" alt="">
+      <button class="lb-nav lb-next" id="lbNext">&#8250;</button>
+    </div>
+    <div class="lb-caption">
+      <span class="name" id="lbName"></span>
+      <span class="lb-counter" id="lbCounter"></span>
+    </div>
+  </div>
+</div>
+
+<footer>Wanderframe — a demo gallery built with HTML, CSS &amp; vanilla JavaScript</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
