@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Groove — Music Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+  <div class="eyebrow">Now Spinning</div>
+  <div class="brand">GROOVE <span>●</span> PLAYER</div>
+
+  <div class="stage">
+    <div class="vinyl" id="vinyl"></div>
+    <div class="tonearm" id="tonearm">
+      <div class="arm"></div>
+      <div class="base"></div>
+    </div>
+  </div>
+
+  <div class="track-info">
+    <div class="song-title" id="songTitle">—</div>
+    <div class="song-artist" id="songArtist">—</div>
+  </div>
+
+  <div class="progress-row">
+    <span class="time" id="currentTime">0:00</span>
+    <div class="progress-bar" id="progressBar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="time" id="durationTime">0:00</span>
+  </div>
+
+  <div class="controls">
+    <button class="ctrl-btn" id="prevBtn" title="Previous">
+      <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+    </button>
+    <button class="ctrl-btn play-btn" id="playBtn" title="Play/Pause">
+      <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <button class="ctrl-btn" id="nextBtn" title="Next">
+      <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zm-9.5 6L15 6v12z"/></svg>
+    </button>
+  </div>
+
+  <div class="bottom-row">
+    <div class="volume-row">
+      <svg id="volIcon" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+      <input type="range" id="volumeSlider" min="0" max="100" value="70">
+    </div>
+    <div class="toggles">
+      <button class="toggle-btn active" id="autoplayBtn">Autoplay</button>
+      <button class="toggle-btn" id="shuffleBtn">Shuffle</button>
+    </div>
+  </div>
+
+  <div class="playlist" id="playlist"></div>
+</div>
+
+<audio id="audio"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
